@@ -69,7 +69,7 @@ class MainController extends Controller
             $total = $total * ($discount/100);
         }
         $order->total = $total;
-        auth('api_client')->user()->orders()->save($order);
+        client()->orders()->save($order);
         $order->products()->attach($products);
         
         return apiRes(200 , 'order created' , $order);

@@ -14,6 +14,7 @@ class CreateOrdersTable extends Migration {
 			$table->integer('restaurant_id')->unsigned();
 			$table->decimal('delivery_cost')->nullable();
 			$table->decimal('app_commission');
+			$table->boolean('payment_method');
 			$table->decimal('total')->nullable();
 			$table->text('note')->nullable();
 			$table->enum('status', array('new', 'current', 'old'));

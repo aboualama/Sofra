@@ -21,7 +21,7 @@ class CreateRestaurantsTable extends Migration {
 			$table->string('phone');
 			$table->string('whatsapp')->nullable();
 			$table->string('img')->nullable();
-			$table->boolean('status');
+			$table->enum('status') array('open', 'close'));
 			$table->string('api_token', 60);
             $table->string('pin_code')->nullable();
 		});
